@@ -16,7 +16,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-       await axios.post('http://VITE_BASEURL/register',{firstname,lastname, email, username, password})
+       await axios.post('http://localhost:5000/register',{firstname,lastname, email, username, password})
        .then(result => {
         console.log(result)
          if(result.data === 'exist'){

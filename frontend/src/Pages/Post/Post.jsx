@@ -27,7 +27,7 @@ function Post() {
       for (let i = 0; i < files.length; i++) {
         formData.append("files", files[i]);
       }
-      axios.post('http://VITE_BASEURL/post', formData)
+      axios.post('http://localhost:5000/post', formData)
         .then((response) => {
           if (response.data !== 'success') {
             window.location.reload();
@@ -43,7 +43,7 @@ function Post() {
 
   const getPost = async () => {
     try {
-      const post = await axios.get('http://VITE_BASEURL/getPost')
+      const post = await axios.get('http://localhost:5000/getPost')
       setallPosts(post.data);
     } catch (error) {
       console.log(error)
@@ -52,7 +52,7 @@ function Post() {
 
 
   const handleRemovePost = (id) => {
-    axios.delete('http://VITE_BASEURL/deletPost/:id', + id)
+    axios.delete('http://localhost:5000/deletPost/:id', + id)
       .then((result) => {
         toast.success('Post Deleted', { position: 'bottom-right' })
         window.location.reload();
@@ -142,7 +142,7 @@ function Post() {
                       </td>
                       <td>
                         {post.files.map((file, index) => (
-                          <Image src={`http://VITE_BASEURL/${file.filePath}`} alt='blog picture' height={60} rounded />
+                          <Image src={`http://localhost:5000/${file.filePath}`} alt='blog picture' height={60} rounded />
                         ))}
                       </td>
                       <td><Link to={`/post/` + post._id} ><FaIcons.FaPencilAlt style={IconStylee} /></Link></td>

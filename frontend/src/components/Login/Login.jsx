@@ -17,7 +17,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      await axios.post('http://VITE_BASEURL/login', {username, password})
+      await axios.post('http://localhost:5000/login', {username, password})
       .then(result =>{
         if(result.data  === 'Wrong Username and Password'){
           toast.info('Wrong Username and Password Combination', {position:'bottom-right'})

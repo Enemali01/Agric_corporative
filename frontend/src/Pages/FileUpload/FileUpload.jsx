@@ -39,7 +39,7 @@ export default function FileUpload() {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete('http://VITE_BASEURL/delete/' + id)
+    axios.delete('http://localhost:5000/delete/' + id)
       .then((res) => {
         console.log(res)
         alert('Image File Deleted')
@@ -49,7 +49,7 @@ export default function FileUpload() {
   }
 
 const handle_Delete = (id) =>{
-  axios.delete('http://VITE_BASEURL/removevid/:id', + id)
+  axios.delete('http://localhost:5000/removevid/:id', + id)
   .then((res) => {
     console.log(res)
     alert('Video File Deleted')
@@ -91,7 +91,7 @@ const handle_Delete = (id) =>{
                                 <td>
                                   {element.files.map((file, index) => (
                                     <td>
-                                      <Image src={`http://VITE_BASEURL/${file.filePath.replace(/\\/g, "/")}`} className="img-responsive" height={60} rounded />
+                                      <Image src={`http://localhost:5000/${file.filePath.replace(/\\/g, "/")}`} className="img-responsive" height={60} rounded />
                                     </td>
                                   ))}
                                 </td>
@@ -146,7 +146,7 @@ const handle_Delete = (id) =>{
                                   {element.videos.map((file, index) => (
                                     <td>
                                       <video autoPlay muted controls className="" height={100} width={100}>
-                                        <source src={`http://VITE_BASEURL/${file.filePath.replace(/\\/g, "/")}`} />
+                                        <source src={`http://localhost:5000/${file.filePath.replace(/\\/g, "/")}`} />
                                       </video>
                                     </td>
                                   ))}

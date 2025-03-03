@@ -24,7 +24,7 @@ function blogdisplay({posts}) {
                       {post.files.map((file, index) =>
                         <div className="">
                           <div className="card mb-2 border-1 p-1">
-                            <img src={`http://VITE_BASEURL/${file.filePath}`} height="350" className="card-img-top img-responsive object-content" alt="img" />
+                            <img src={`http://localhost:5000/${file.filePath}`} height="350" className="card-img-top img-responsive object-content" alt="img" />
                           </div>
                         </div>
                       )}

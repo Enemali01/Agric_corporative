@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiUrl = 'http://VITE_BASEURL/';
+const apiUrl = 'http://localhost:5000/';
 
 export const multipleFileUpload = async(data) =>{
   try {

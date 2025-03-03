@@ -23,7 +23,7 @@ function sidebar() {
   const Icon ={color:'#fff'}
   
   const handleLogout = () => {
-      axios.get('http://VITE_BASEURL/logout/:id')
+      axios.get('http://localhost:5000/logout/:id')
       .then((res)=>{
         localStorage.removeItem('token')
        navigate('/')

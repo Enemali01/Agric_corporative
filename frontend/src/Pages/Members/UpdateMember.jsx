@@ -29,7 +29,7 @@ function UpdateMember() {
 
    
 useEffect(()=>{
-   axios.get(`http://VITE_BASEURL/member/${id}`)
+   axios.get(`http://localhost:5000/member/${id}`)
    .then((response)=>{
      setMember(response.data);
    }).catch((error)=>{console.log(error)})
@@ -37,7 +37,7 @@ useEffect(()=>{
  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://VITE_BASEURL/update/member/${id}`, member)
+    await axios.put(`http://localhost:5000/update/member/${id}`, member)
     toast.success('Member name Updated', {position:'bottom-right'})
 }
 

@@ -17,7 +17,7 @@ export default function blogPost() {
   useEffect(() => {
     const blogPost = async () => {
       try {
-        const post = await axios.get('http://VITE_BASEURL/getPost')
+        const post = await axios.get('http://localhost:5000/getPost')
         setPosts(post.data);
       } catch (error) {
         console.log(error)

@@ -16,7 +16,7 @@ const handleSubmit = (e) => {
   for (let i = 0; i < videos.length; i++) {
     formData.append("videos", videos[i]);
   }
-   axios.post('http://VITE_BASEURL/video', formData)
+   axios.post('http://localhost:5000/video', formData)
   .then((res) =>{
     if(res === 'bad'){
       alert('Oops. Something Went Wrong')

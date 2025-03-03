@@ -1,1 +1,1 @@
-GET http://VITE_BASEURL/paginatedImage?page=1&limit=1
+GET http://localhost:5000/paginatedImage?page=1&limit=1

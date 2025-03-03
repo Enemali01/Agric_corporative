@@ -22,7 +22,7 @@ function Members() {
   const createMember = async(e) => {
     e.preventDefault();
     try {
-      await axios.post('http://VITE_BASEURL/member', {lastname, firstname, email, phone, position })
+      await axios.post('http://localhost:5000/member', {lastname, firstname, email, phone, position })
         .then(member => {
           // console.log(member)
           if (member.data == 'Member with Phone number and Email Address Exist') {
@@ -47,7 +47,7 @@ const getMember = async() =>{
 }
 
 const deleteMember = (id) =>{
-  axios.delete('http://VITE_BASEURL/remove/:id', +id)
+  axios.delete('http://localhost:5000/remove/:id', +id)
   .then(result =>{
     if(result.data == 'Member Does not exist'){
       toast.info('Oops, Something went Wrong! Try Again', { position: 'top-right' })
