@@ -1,0 +1,54 @@
+.hero{
+  background-image: url('../../images/heroimg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 35rem;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  filter:brightness(70%)
+}
+.herotext{
+  padding-top: 80px;
+  color: #000;
+  font-size: 20px;
+}
+
+.what{
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.whatimg{
+  display: flex;
+  width: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery{
+  background-color: #e0e0e0;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+}
+.gallaries{
+  display:inline-table;
+  border: 1px solid #b0aeae;
+  margin: 5px;
+  width: 260px;  
+}
+.gallaries, .description{
+  padding: 5px;
+  text-align: center;
+}
+.gallaries:hover{
+  border: 1px solid #029222af;
+}
+.gallaries img{
+  width: 100%;
+  /* height: 100%; */
+  object-fit: fit;
+}
+.subscribe{
+  padding: 40px;
+}

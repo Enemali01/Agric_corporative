@@ -1,0 +1,33 @@
+.profile{
+  background-color: #e0e0e0;
+  height: auto;
+  padding-bottom: 200px;
+}
+
+
+/* .profile{
+  flex-direction: column;
+  text-align: center;
+}
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+} */
+/* input[type="file"]{
+  display: none;
+/* } */
+/* .custom-file-upload{
+  margin: auto;
+  border: 1px solid #6f1f1f;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+p, span{
+  text-align: center;
+  font-size: 15px;
+} */ 

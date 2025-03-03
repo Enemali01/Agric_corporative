@@ -1,0 +1,22 @@
+.footer{
+  background-color: #198754;
+  padding: 50px 0 0 0;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+.footerul{
+  list-style: none;
+  text-align: center;
+  padding-top: 10px;
+ ;
+}
+li{
+   display: inline-block;
+   margin:4px;
+}
+/* .social-icon{
+  display: flex;
+} */
+span{
+  height: 500px;
+}
