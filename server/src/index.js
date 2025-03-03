@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors({
    credentials: true,
-   origin:['http://localhost:8000'],
+   origin:process.env.BASE_URL,
 }));
 
 const __filename = fileURLToPath(import.meta.url);
@@ -93,7 +93,6 @@ app.post('/mail', (req,res) =>{
 
 
 
-const PORT = 5000 || process.env.PORT;
-app.listen(PORT, ()=> {
-  console.log(`App is running on port${PORT}`)
-})
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on port ${process.env.PORT}`);
+});
