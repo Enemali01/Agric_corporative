@@ -24,7 +24,7 @@ function UpdatePost() {
   
 
 useEffect(()=>{
-      axios.get(`http://localhost:5000/posts/${id}`)
+      axios.get(`http://VITE_BASEURL/posts/${id}`)
     .then((res) => {
       setallPosts(res.data)
     }).catch((error)=>{console.log(error)})
@@ -33,7 +33,7 @@ useEffect(()=>{
 
 const handleEdit = async(e)=>{
   e.preventDefault();
-  await axios.put(`http://localhost:5000/update/${id}`,allPosts)
+  await axios.put(`http://VITE_BASEURL/update/${id}`,allPosts)
   toast.success('Blog Post Uploaded', {position:'bottom-right'})
 }
 

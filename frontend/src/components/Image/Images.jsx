@@ -22,7 +22,7 @@ export default function Images({multipleFiles, loading}) {
                       {element.files.map((file, index) =>
                         <div className="col-sm-6 col-sm-4 col-sm-3">
                           <div className="card mb-2 border-3 p-1">
-                            <Image src={`http://localhost:5000/${file.filePath}`} height="450" className="card-img-top img-responsive object-content" alt="img" />
+                            <Image src={`http://VITE_BASEURL/${file.filePath}`} height="450" className="card-img-top img-responsive object-content" alt="img" />
                           </div>
                         </div>
                       )}
@@ -48,7 +48,7 @@ export default function Images({multipleFiles, loading}) {
                         <div className="col-12 col-6 col-4 col-3">
                           <div className="card mb-2 border-0 p-0">
                             <video controls className="object-cover h-full w-full" height={300}>
-                              <source src={`http://localhost:5000/${file.filePath.replace(/\\/g, "/")}`} />
+                              <source src={`http://VITE_BASEURL/${file.filePath.replace(/\\/g, "/")}`} />
                             </video>
                           </div>
                         </div>

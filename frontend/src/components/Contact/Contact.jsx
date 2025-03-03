@@ -40,7 +40,7 @@ export default function Contact() {
     setFirstname('')
 
     try {
-      await axios.post('http://localhost:5000/mail', dataToSend)
+      await axios.post('http://VITE_BASEURL/mail', dataToSend)
       toast.success('Mail Sent', { position: 'bottom-right' })
        window.location.reload();
       //  if(res.data === 'success'){
